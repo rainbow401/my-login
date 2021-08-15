@@ -17,6 +17,6 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public String error(Exception e) {
         e.printStackTrace();
-        return "发生未知问题";
+        return e.getMessage();
     }
 }

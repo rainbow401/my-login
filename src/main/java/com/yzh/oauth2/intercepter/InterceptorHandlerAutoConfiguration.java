@@ -23,6 +23,6 @@ public class InterceptorHandlerAutoConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(yzhContextInternalInterceptor());
+        registry.addInterceptor(yzhContextInternalInterceptor()).excludePathPatterns("/login");
     }
 }
