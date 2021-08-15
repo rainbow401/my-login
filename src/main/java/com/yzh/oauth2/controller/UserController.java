@@ -18,7 +18,7 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
-    @RequestMapping(value = "test")
+    @GetMapping("test")
     public String test(){
         redisTemplate.boundValueOps("key").set("value");
         String str1 = (String) redisTemplate.boundValueOps("key").get();

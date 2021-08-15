@@ -10,6 +10,7 @@ import com.yzh.oauth2.serviceContext.YzhContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.DigestUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,8 +27,8 @@ public class LoginController {
     @Autowired
     private RedisTemplate redisTemplate;
 
-//    @Autowired
-//    private YzhContext yzhContext;
+    @Autowired
+    private YzhContext yzhContext;
 
 
     @RequestMapping("login")
@@ -51,9 +52,9 @@ public class LoginController {
         }
     }
 
-//    @RequestMapping("test")
-//    @ResponseBody
-//    public Long test() {
-//        return yzhContext.currentToken().getUserId();
-//    }
+    @GetMapping("test1")
+    @ResponseBody
+    public Long test() {
+        return yzhContext.currentToken().getUserId();
+    }
 }
