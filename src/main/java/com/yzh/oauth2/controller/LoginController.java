@@ -23,7 +23,7 @@ public class LoginController {
     private UserMapper userMapper;
 
     @Autowired
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, String> redisTemplate;
 
     @Autowired
     private YzhContext yzhContext;
