@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: login-server
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.0.190:8848
+        file-extension:  yaml
+      discovery:
+        server-addr: 192.168.0.190:8848
+  profiles:
+    active: dev
