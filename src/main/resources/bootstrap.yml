@@ -4,16 +4,9 @@ spring:
   cloud:
     nacos:
       config:
-<<<<<<< HEAD
         server-addr: 192.168.0.192:8848
         file-extension:  properties
       discovery:
         server-addr: 192.168.0.192:8848
-=======
-        server-addr: 192.168.0.190:8848
-        file-extension:  yaml
-      discovery:
-        server-addr: 192.168.0.190:8848
->>>>>>> c7fc41773419222f46cf795565301f19cad9fb86
   profiles:
     active: dev
