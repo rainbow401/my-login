@@ -21,6 +21,6 @@ public class AuthInterceptor implements HandlerInterceptor {
 
 //        request.getHeader(Token.X_TOKEN);
 //        String token = redisTemplate.boundGeoOps("");
-        return false;
+        return true;
     }
 }

@@ -2,6 +2,7 @@ package com.yzh.oauth2.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.yzh.oauth2.Mapper.UserMapper;
+import com.yzh.oauth2.Repository.UserRepository;
 import com.yzh.oauth2.Utils.Md5Utils;
 import com.yzh.oauth2.Utils.TokenUtils;
 import com.yzh.oauth2.entity.User;
@@ -24,6 +25,9 @@ public class LoginController {
 
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
+
+    @Autowired
+    private UserRepository userRepository;
 
     @Autowired
     private YzhContext yzhContext;
@@ -53,7 +57,9 @@ public class LoginController {
     @GetMapping("test1")
     @ResponseBody
     public String test() {
-        Long userID = yzhContext.currentToken().getUserId();
-        return userID.toString();
+        User user = new User();
+        user.setId(1L);
+        userRepository.insert(user);
+        return user.toString();
     }
 }
