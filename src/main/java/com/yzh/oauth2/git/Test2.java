@@ -1,2 +1,4 @@
-package com.yzh.oauth2.git;public class Test2 {
+package com.yzh.oauth2.git;
+
+public class Test2 {
 }
